@@ -54,10 +54,10 @@ $(document).ready(function () {
     $('#btn-ubicacion').on('click',function(e){
         e.preventDefault();
         $('html, body').animate({
-            scrollTop: ubicacion
+            scrollTop: ubicacion +100
         }, 500);
     });
 
-    
+
 
 });
