@@ -1,4 +1,4 @@
-# Coffe-Shop
+# Coffee-Shop
 
 Pagina front de un cafe, hecha con Javascript + Jquery, usando SASS
 
