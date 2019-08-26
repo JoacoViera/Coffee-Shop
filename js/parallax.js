@@ -1,4 +1,4 @@
-$(document).ready(function () {
+document.addEventListener('DOMContentLoaded', (event) => {
     
     $(window).scroll(function(){
         var windowWidth = $(window).width();

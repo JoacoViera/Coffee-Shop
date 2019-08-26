@@ -358,4 +358,40 @@ footer .copyright {
     line-height: 16px;
   }
 }
+
+@-webkit-keyframes moveDown {
+  from {
+    top: -200px;
+  }
+  to {
+    top: 0px;
+  }
+}
+
+@keyframes moveDown {
+  from {
+    top: -200px;
+  }
+  to {
+    top: 0px;
+  }
+}
+
+@-webkit-keyframes titleAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes titleAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /*# sourceMappingURL=estilos.css.map */

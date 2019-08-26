@@ -1,62 +1,57 @@
-$(document).ready(function () {
-    //Efecto Menu
-    $('.menu a').each(function(index,elemento){
-        $(this).css({
-            'top':'-200px'
-        });
+document.addEventListener('DOMContentLoaded', (event) => { 
+    //MENU APARECE LENTAMENTE
 
-        $(this).animate({
-            'top':'0'
-        }, 2000 + (index * 500));
+    //http://www.java2s.com/Tutorials/Javascript/Buildin_Object/Style/Style_animation.html
+    
+    //object.style.animation='name duration timingFunction delay iterationCount direction fillMode playState';
+
+    const header = document.querySelectorAll('#menu a');
+
+    header.forEach((element,index) => {
+        element.style.top = '-200px';
+        element.style.WebkitAnimation = `moveDown ${2+index*0.5}s`;
+        element.style.top = '0px';
     });
 
-    //Efecto Header
+    //SCROLL SUAVE AL APRETAR EN UN BOTON DEL MENU
 
-    var acercaDe = $('#acerca-de').offset().top,
-        menu = $('#platillos').offset().top,
-        galeria = $('#galeria').offset().top,
-        ubicacion = $('#ubicacion').offset().top;
+    let acercaDe = document.querySelector("#acerca-de").offsetTop,
+        menu = document.querySelector("#platillos").offsetTop,
+        galeria = document.querySelector("#galeria").offsetTop,
+        ubicacion = document.querySelector("#ubicacion").offsetTop
 
-    if($(window).width() > 1000){
-        $('header .textos').css({
-            opacity: 0,
-            marginTop: 0
-        });
-
-        $('header .textos').animate({
-            opacity: 1,
-            marginTop: '-52 px'
-        }, 1500);
-
-        //Scroll
+        if(window.screenX > 1000){
         
-        $('#btn-acerca-de').on('click',function(e){
-            e.preventDefault();
-            $('html, body').animate({
-                scrollTop: acercaDe -100
-            }, 500);
-        });
+            let headerTextos = document.querySelector('header .textos');
+            headerTextos.style.WebkitAnimation = 'titleAppear 5s';
+        
+            $('#btn-acerca-de').on('click',function(e){
+                e.preventDefault();
+                $('html, body').animate({
+                    scrollTop: acercaDe -100
+                }, 500);
+            });
 
-        $('#btn-menu').on('click',function(e){
-            e.preventDefault();
-            $('html, body').animate({
-                scrollTop: menu
-            }, 500);
-        });
+            $('#btn-menu').on('click',function(e){
+                e.preventDefault();
+                $('html, body').animate({
+                    scrollTop: menu
+                }, 500);
+            });
 
-        $('#btn-galeria').on('click',function(e){
-            e.preventDefault();
-            $('html, body').animate({
-                scrollTop: galeria
-            }, 500);
-        });
+            $('#btn-galeria').on('click',function(e){
+                e.preventDefault();
+                $('html, body').animate({
+                    scrollTop: galeria
+                }, 500);
+            });
 
-        $('#btn-ubicacion').on('click',function(e){
-            e.preventDefault();
-            $('html, body').animate({
-                scrollTop: ubicacion +100
-            }, 500);
-        });
+            $('#btn-ubicacion').on('click',function(e){
+                e.preventDefault();
+                $('html, body').animate({
+                    scrollTop: ubicacion +100
+                }, 500);
+            });
     } else{
         $('#btn-acerca-de').on('click',function(e){
             e.preventDefault();
@@ -87,11 +82,4 @@ $(document).ready(function () {
         });
 
     }
-    
-
-  
-    
-
-
-
 });

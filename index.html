@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600,700" rel="stylesheet"> 
-    <link rel="stylesheet" href="sass/estilos.css">
     <title>Cafe</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600,700" rel="stylesheet"> 
+    <link rel="stylesheet" href="sass/estilos.css">
+
+    <script src="js/jqueryComp.js" ></script>
+    <script src="js/efectos.js" ></script>
+    <script src="js/parallax.js" ></script>
 </head>
 <body>
     <header>
         <div class="contenedor">
-            <nav class="menu">
+            <nav class="menu" id="menu">
                 <a href="#" id="btn-acerca-de">Acerca de</a>
                 <a href="#" id="btn-menu">Menú</a>
                 <a href="#" id="btn-galeria">Galería</a>
@@ -36,7 +41,7 @@
                     <img src="img/acerca-de.jpg" alt="">
                 </div>
                 <article>
-                    <h3>Acerca de</h3>
+                    <h3 id="acercaDe">Acerca de</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Sed sagittis nisl dictum.</p> 
                     <p>Officiis, quos! Dolor, illo rerum minima magnam praesentium autem voluptate ut quam. Officiis, quos! Dolor, illo rerum minima magnam praesentium autem voluptate ut quam</p>
                 </article>
@@ -165,11 +170,5 @@
             </div>
         </div>
     </footer>
-
-    <script src="js/jqueryComp.js"></script>
-    <script src="js/efectos.js"></script>
-    <script src="js/parallax.js"></script>
-
-    
 </body>
 </html>
