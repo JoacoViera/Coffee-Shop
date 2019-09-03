@@ -38,7 +38,7 @@ header .menu {
 header .menu a {
   color: #ffffff;
   font-size: 20px;
-  font-weight: 300;
+  font-weight: bold;
   display: inline-block;
   margin: 40px 20px;
   text-decoration: none;
@@ -64,6 +64,7 @@ header .textos .nombre {
 
 header .textos .nombre span {
   font-weight: 300;
+  color: #C2BFBA;
 }
 
 header .textos h3 {
@@ -221,7 +222,8 @@ header .textos h1 {
 }
 
 .main .ubicacion {
-  background: #fff;
+  background: url("../img/bg-textura.png");
+  background-repeat: repeat;
   padding: 60px 0;
   overflow: hidden;
 }
